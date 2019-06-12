@@ -1,0 +1,15 @@
+n=-5:1:5;%range
+x=input('Enter Signal Also Enter Either Shift Right Or Left');%user input
+subplot(2,1,1);%2 row 1 column 1st place
+stem(n,n==0);%original
+title('Original');%title of original
+switch(x)
+    case'+'
+        subplot(2,1,2);%2 row 1 column 2nd place
+        stem(n,n==0+s);%delayed
+        title('Delayed');%title of graph 2
+        case'+'
+        subplot(2,1,2);%2 row 1 column 2nd place
+        stem(n,n==0-s);%advanced
+        title('Advanced');%title of graph 2
+end

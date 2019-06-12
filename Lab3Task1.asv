@@ -1,0 +1,24 @@
+a=1;%amplitude
+f=2;%frequency in hertz
+dutycycle=2;%duty cycle
+fs=100;%sample frequency
+t=0:1/fs:dutycycle/f;%time period formula
+subplot(3,2,1);%3 rows 2 colums 1st box
+plot(t,a*sin(2*pi*f*t));%first graph plotted
+title('Sine Wave');%sine wave title
+grid on;%boxes shown on graph
+subplot(3,2,2);%3 rows 2 colums 2nd box
+plot(t,a*cos(2*pi*f*t));%2nd graph plotted
+grid on;%boxes shown on graph
+title('Cosine Wave');%cosine wave title
+subplot(3,2,3);%3 rows 2 colums 3rd box
+plot(t,a*tan(2*pi*f*t));%third graph plotted
+title('Tangent Wave');%title of tangent wave
+grid on;%boxes shown on graph
+subplot(3,2,4);%3 rows 2 colums 4th box
+plot(t,a*csc(2*pi*f*t));%fourth graph plotted
+title('Cosecant Wave');%cosecant wave title
+grid on;%boxes shown on graph
+subplot(3,2,5)%3 rows 2 columns 5th box
+plot(t,a*cot(2*pi*f*t));%5th graph plotted
+plot(t,a*sec(2*pi*f*t));%6th gr

@@ -1,0 +1,14 @@
+f=0.05;%frequency
+a=3.5;%amplitude
+fs=100;%sample frequency
+dutycycle=5;%dutycyle
+t=0:1/fs:dutycycle/f;%
+subplot(2,1,1);
+plot(t,a*square(2*pi*freq.*t,dutycycle));
+title('Rectangular Wave');
+grid on;
+subplot(2,1,2);
+plot(t,a*square(2*pi*freq.*t,dutycycle*10));
+title('Rectangular Wave');
+grid on;
+

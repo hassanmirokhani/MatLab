@@ -1,0 +1,5 @@
+n=0:1:10;%range
+f=0.5;%frequency
+x=square(2*pi*f*n,5);%square wave
+subplot(2,1,1);%2 rows 1 column 1st place
+stem(n,square(2*pi*f*n,5
