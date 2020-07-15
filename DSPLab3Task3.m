@@ -1,0 +1,9 @@
+fd=1/50;%frequency
+n=0:499;%time period
+q=input('Enter Digits After Point ');%user input
+x=cos(2*pi*fd*n);%cosine function
+px=sum(abs(x).^2)/length(x)%power signal
+xq=round(x*10^q)/10^q;%rounding off
+xe=x-xq;%error ratio
+pe=sum(abs(xe).^2)/length(xe)%error power
+sqnr=10*log10(px/pe)%sqnr

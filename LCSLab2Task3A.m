@@ -1,0 +1,12 @@
+s=tf('s');
+g1=3/(s+2);
+g2=1/(s+3);
+g3=1/(s+1);
+g4=3;
+h1=2;
+h2=1/s;
+a=series(g1,g4);
+b=feedback(a,h1,+1);
+c=parallel(g2,g3);
+d=series(b,c);
+c=feedback(d,h2)

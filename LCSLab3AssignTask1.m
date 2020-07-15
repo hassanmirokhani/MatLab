@@ -1,0 +1,15 @@
+s=tf('s');
+b1=1/(s+1);
+b2=1/(s+3);
+b3=2;
+b4=1/s;
+y=append(b1,b2,b3,b4);
+q1=[1 -3 0;2 1 -4;3 -2 0;4 -2 0];
+sys1=connect(y,q1,1,2)
+q2=[2 -4;4 -2;3 -2;1 -3];
+sys2=connect(y,q2,2,2)
+q3=[2 -4;4 2;3 2;1 -3];
+sys3=connect(y,q3,2,2)
+q4=[1 -3 0;2 1 -4;4 -2 0;3 0 0];
+sys4=connect(y,q4,3,2)
+sys=sys1+sys2+sys3+sys4

@@ -1,0 +1,16 @@
+T = 10*(1/50);
+fs = 1000;
+t = 0:1/fs:T-1/fs;
+m1 = sin(25000*2*pi*t);
+m2 = sawtooth(25000*2*pi*t,1/2);
+m3 = 2*cos(250000*pi*t);
+m4 = 2*cos(250000*2*pi*t);
+x = m2*m3;
+subplot(2,1,1);
+plot(t,x);
+y = m1 + x;
+subplot(2,1,2);
+plot(y,x);
+z = m4 * y;
+subplot(2,1,3);
+plot(t,z);
